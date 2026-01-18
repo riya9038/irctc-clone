@@ -1,0 +1,12 @@
+.mainContainer {
+  background-color: #f8f9fa;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+.trainCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}

@@ -1,0 +1,58 @@
+.cardContainer {
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  padding: 10px;
+  box-shadow: 0.5px 0.5px 2px 2px #ebe9e9;
+}
+.cardHeader {
+  background-color: #f5f5f5;
+}
+.cardHeader p {
+  font-size: 18px;
+}
+.cardHeader p:last-child {
+  color: blue;
+  cursor: pointer;
+}
+.cardHeader,
+.cardDetails {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.cardDetails div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+.trainType {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+.trainType button {
+  border-radius: 6px;
+  padding: 0px 10px;
+  border: 1px solid lightgray;
+  text-align: left;
+}
+.actionBtns {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.actionBtns button {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: rgb(246, 189, 2);
+  border: 1px solid rgb(246, 189, 2);
+  background-color: white;
+}
+.actionBtns button:first-child {
+  background-color: rgb(246, 189, 2);
+  border: 1px solid white;
+  color: white;
+}

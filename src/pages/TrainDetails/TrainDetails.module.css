@@ -1,0 +1,130 @@
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0.5px 0.5px 2px 2px #f2f2f2;
+}
+.trainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.daysOfOperation div,
+.fareInfo div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.daysOfOperation button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.trainTracker {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  width: 40%;
+  margin: 20px auto;
+}
+.trainTracker::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50;
+  width: 5px;
+  height: 100%;
+  background-color: lightgray;
+}
+.station button {
+  border: 1px solid green;
+  color: green;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: white;
+}
+.station p {
+  font-size: 12px;
+}
+.source {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 70px;
+}
+.source::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #28a745;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 49%;
+  z-index: 2;
+}
+.destination {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+.destination::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #28a745;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30%;
+  left: 49%;
+  z-index: 2;
+}
+.fareInfo {
+  background: #f8f9fa;
+  border-radius: 6px;
+  box-shadow: 0.5px 0.5px 2px 2px #f2f2f2;
+  padding: 15px 20px;
+  width: 50%;
+  margin: auto;
+}
+.fareInfo button {
+  border: 1px solid lightgray;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.active {
+  background-color: #007bff;
+  color: white;
+}
+.fareDetails {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.fareDetails div {
+  display: flex;
+  justify-content: space-between;
+}
+.fareDetails div p {
+  margin: 5px 0px;
+}
+.bookNowBtn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  margin: 20px 0px;
+}
+.backBtn {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}

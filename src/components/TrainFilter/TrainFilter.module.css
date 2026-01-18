@@ -1,0 +1,11 @@
+.filterContainer {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0.5px 0.5px 2px 2px #ebe9e9;
+  width: 20%;
+}
+.checkBox {
+  display: flex;
+  align-items: center;
+}

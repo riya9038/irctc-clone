@@ -64,8 +64,18 @@ export default function Header() {
           )}
         </div>
       </nav>
-      {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
-      {showRegister && <RegisterModal onClose={() => setShowRegister(false)} />}
+      {showLogin && (
+        <LoginModal
+          onClose={() => setShowLogin(false)}
+          setShowRegister={setShowRegister}
+        />
+      )}
+      {showRegister && (
+        <RegisterModal
+          onClose={() => setShowRegister(false)}
+          setShowLogin={setShowLogin}
+        />
+      )}
     </>
   );
 }

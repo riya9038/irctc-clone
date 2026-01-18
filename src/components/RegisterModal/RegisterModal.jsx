@@ -1,16 +1,42 @@
 import React, { useState } from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import styles from "./RegisterModal.module.css";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../config/firebaseConfig";
+//import { useNavigate } from "react-router-dom";
 
-export default function RegisterModal({ onClose }) {
+export default function RegisterModal({ onClose, setShowLogin }) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     confirmPassword: "",
   });
+  const [error, setError] = useState("");
+  //const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, formData.username, formData.password)
+      .then((userCredential) => {
+        // Signed up
+        setError("");
+        setFormData({ username: "", password: "", confirmPassword: "" });
+        onClose();
+        setShowLogin(true);
+        //navigate("/");
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+        // ..
+      });
   };
 
   return (
@@ -22,7 +48,7 @@ export default function RegisterModal({ onClose }) {
         <main className={styles.mainContainer}>
           <h1>Register</h1>
 
-          <form>
+          <form onSubmit={(e) => handleSubmit(e)}>
             <input
               type="email"
               placeholder="Enter username"
@@ -44,13 +70,25 @@ export default function RegisterModal({ onClose }) {
               value={formData.confirmPassword}
               onChange={(e) => handleChange(e)}
             />
+            {error && <p>{error}</p>}
             <div className={styles.authBtns}>
               <button>Register</button>
               <button style={{ backgroundColor: "lightgray" }}>
                 Register With Google
               </button>
             </div>
-            <p>Already have an account?Login here</p>
+            <p>
+              Already have an account?
+              <span
+                className={styles.subText}
+                onClick={() => {
+                  setShowLogin(true);
+                  onClose();
+                }}
+              >
+                Login here
+              </span>
+            </p>
           </form>
         </main>
       </div>

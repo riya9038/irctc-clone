@@ -50,3 +50,7 @@ form button {
   border-radius: 8px;
   cursor: pointer;
 }
+.subText {
+  color: #3498db;
+  cursor: pointer;
+}

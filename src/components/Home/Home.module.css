@@ -1,0 +1,78 @@
+.homeContainer {
+  background: white;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+h2 {
+  color: #333;
+}
+.icon {
+  color: gray;
+}
+.inputStation,
+.dateClass,
+.actionBtn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0px;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 6px;
+  width: 50%;
+}
+input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+input[type="date"] {
+  width: 100%;
+}
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 6px;
+}
+.checkBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.checkBoxContainer div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.actionBtn button {
+  width: 50%;
+  padding: 15px 10px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+.bgOrange {
+  background-color: #e74c3c;
+}
+.bgBlue {
+  background-color: #3498db;
+}

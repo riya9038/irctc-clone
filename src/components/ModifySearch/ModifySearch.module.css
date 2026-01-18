@@ -1,0 +1,36 @@
+.modifySearch {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.container {
+  padding: 10px;
+}
+
+.container,
+.inputWrapper,
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputWrapper,
+.selectWrapper {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: white;
+}
+.modifyBtn {
+  background-color: rgb(246, 189, 2);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid white;
+  font-weight: 600;
+}
